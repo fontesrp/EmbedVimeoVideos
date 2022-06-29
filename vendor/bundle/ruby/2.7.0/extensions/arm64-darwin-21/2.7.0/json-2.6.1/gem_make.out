@@ -1,0 +1,13 @@
+current directory: /Users/rfontes/Sites/EmbedVimeoVideos/vendor/bundle/ruby/2.7.0/gems/json-2.6.1/ext/json
+/Users/rfontes/.rvm/rubies/ruby-2.7.4/bin/ruby -I /Users/rfontes/.rvm/rubies/ruby-2.7.4/lib/ruby/2.7.0 -r ./siteconf20220622-19031-ddw9e6.rb extconf.rb
+creating Makefile
+
+current directory: /Users/rfontes/Sites/EmbedVimeoVideos/vendor/bundle/ruby/2.7.0/gems/json-2.6.1/ext/json
+make "DESTDIR=" clean
+
+current directory: /Users/rfontes/Sites/EmbedVimeoVideos/vendor/bundle/ruby/2.7.0/gems/json-2.6.1/ext/json
+make "DESTDIR="
+make: Nothing to be done for `all'.
+
+current directory: /Users/rfontes/Sites/EmbedVimeoVideos/vendor/bundle/ruby/2.7.0/gems/json-2.6.1/ext/json
+make "DESTDIR=" install

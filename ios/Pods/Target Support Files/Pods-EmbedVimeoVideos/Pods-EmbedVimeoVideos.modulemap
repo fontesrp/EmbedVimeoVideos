@@ -1,0 +1,6 @@
+module Pods_EmbedVimeoVideos {
+  umbrella header "Pods-EmbedVimeoVideos-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+<svg width="100%" height="100%" viewBox="0 0 12 12" preserveAspectRatio="xMidYMid" focusable="false" aria-hidden="true" fill="#E8E6E3" xmlns="http://www.w3.org/2000/svg">
+  <polyline points="6,6 5.9,2 4.9,3 2.9,1 1,2.9 3,4.9 2,5.9" transform="translate(6,6)"></polyline>
+  <polyline points="6,6 5.9,2 4.9,3 2.9,1 1,2.9 3,4.9 2,5.9" transform="translate(6,6) rotate(90)"></polyline>
+  <polyline points="6,6 5.9,2 4.9,3 2.9,1 1,2.9 3,4.9 2,5.9" transform="translate(6,6) rotate(180)"></polyline>
+  <polyline points="6,6 5.9,2 4.9,3 2.9,1 1,2.9 3,4.9 2,5.9" transform="translate(6,6) rotate(270)"></polyline>
+</svg>
