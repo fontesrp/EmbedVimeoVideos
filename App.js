@@ -1,5 +1,11 @@
 import React, {useCallback, useEffect, useRef, useState} from 'react';
-import {Pressable, StyleSheet, useWindowDimensions, View} from 'react-native';
+import {
+  Platform,
+  Pressable,
+  StyleSheet,
+  useWindowDimensions,
+  View,
+} from 'react-native';
 
 import {
   LANDSCAPE,
@@ -49,7 +55,10 @@ const Video = ({intialHeight, videoId}) => {
   );
 
   const videoHeight = isFullScreen
-    ? windowHeight - insets.top - insets.bottom
+    ? windowHeight -
+      insets.top -
+      insets.bottom -
+      Platform.select({android: 50, ios: 0})
     : iframeDimensions.height;
 
   const videoWidth = isFullScreen
@@ -63,12 +72,16 @@ const Video = ({intialHeight, videoId}) => {
     <html>
     <head>
       <meta charset="utf-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
       <title>Vimeo Demo</title>
       <style>
         * {
           margin: 0;
           padding: 0;
+        }
+        html, body {
+          height: 100%;
+          overflow: hidden;
         }
       </style>
     </head>
@@ -81,13 +94,13 @@ const Video = ({intialHeight, videoId}) => {
           window.ReactNativeWebView.postMessage &&
           window.ReactNativeWebView.postMessage(JSON.stringify(message));
 
-        const getVideoPlayerDiv = () => document.getElementById('MyVimeo')
+        const getVideoPlayerDiv = () => document.getElementById('MyVimeo');
 
-        const getVideoPlayerElement = () => getVideoPlayerDiv().firstChild
+        const getVideoPlayerElement = () => getVideoPlayerDiv().firstChild;
 
-        const getVideoPlayerHeight = () => getVideoPlayerElement().offsetHeight
+        const getVideoPlayerHeight = () => getVideoPlayerElement().offsetHeight;
 
-        const getVideoPlayerWidth = () => getVideoPlayerElement().offsetWidth
+        const getVideoPlayerWidth = () => getVideoPlayerElement().offsetWidth;
 
         const videoPlayer = new Vimeo.Player('MyVimeo', {
           id: '${videoId}',
